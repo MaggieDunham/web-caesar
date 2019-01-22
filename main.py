@@ -18,7 +18,7 @@ form = """
                 width: 540px;
                 font: 16px sans-serif;
                 border-radius: 10px;
-                }}
+            }}
             textarea{{
                 margin: 10px 0;
                 width: 540px;
@@ -51,10 +51,10 @@ def index():
 
 @app.route("/", methods=['POST'])
 def encrypt():
-    rotated = int(request.form['rot'])
-    message = request.form['text']
-    encrypted_message = rotate_string(message, rotated)
+    buzz = int(request.form['rot'])
+    houston = request.form['text']
+    moon = rotate_string(houston, buzz)
     #return"<h1>"  encrypted_message  "</h1>"
-    return form.format(encrypted_message)
+    return form.format(moon)
    
 app.run()
