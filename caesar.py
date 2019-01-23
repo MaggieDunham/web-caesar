@@ -9,7 +9,7 @@ def rotate_string_13(text):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
     for char in text:
-        rotated_idx = (alphabet_position(char) + 13) % 26
+        rotated_idx += (alphabet_position(char) + 13) % 26
         if char.isupper():
             rotated = rotated + alphabet[rotated_idx].upper()
         else:
